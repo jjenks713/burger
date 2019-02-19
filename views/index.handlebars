@@ -1,5 +1,6 @@
 <section class="container bg-info p-5">
-<h1 class="text-center bg-dark text-light p-5">Burgers <img src="../public/assets/img/download.jpg" width="200px" id="cute_burger"></h1>
+	<h1 class="text-center bg-dark text-light p-5">Burgers <img src="../public/assets/img/download.jpg" width="200px"
+			id="cute_burger"></h1>
 
 
 	<h2 class="m-t-5">Add A Burger Option</h2>
@@ -24,7 +25,7 @@
 				{{#unless this.devoured}}
 				<div>
 					<h4 class="text-dark">{{this.burger_name}}</h4>
-					<form action="/api/burgers/{{this.id}}" method="PUT">
+					<form action="/api/burgers/{{this.id}}?_method=PUT" method="PUT">
 						<button type="submit" class='btn btn-dark'> Click to Devour!</button>
 					</form>
 				</div>
