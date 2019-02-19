@@ -25,7 +25,7 @@
 				{{#unless this.devoured}}
 				<div>
 					<h4 class="text-dark">{{this.burger_name}}</h4>
-					<form action="/api/burgers/{{this.id}}?_method=PUT" method="PUT">
+					<form action="/api/burgers/{{this.id}}?_method=PUT" method="POST">
 						<button type="submit" class='btn btn-dark'> Click to Devour!</button>
 					</form>
 				</div>
