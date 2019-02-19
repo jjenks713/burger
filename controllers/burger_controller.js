@@ -32,7 +32,7 @@ router.post('/api/burgers/:id', function(req, res) {
   var condition = 'id = ' + req.params.id;
   console.log("condition", condition);
   burger.updateOne({
-    devoured: 1
+    devoured: true
   }
   , condition, function(result) {
     if (result.changedRows == 0) {
@@ -42,6 +42,7 @@ router.post('/api/burgers/:id', function(req, res) {
       res.status(200).end();
     }
     // console.log(result);
+    res.redirect("/");
   });
 });
 
