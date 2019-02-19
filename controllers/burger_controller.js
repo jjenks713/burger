@@ -30,7 +30,7 @@ router.post('/api/burgers', function(req, res) {
 
 router.post('/api/burgers/:id', function(req, res) {
   var condition = 'id = ' + req.params.id;
-  console.log("condition", condition);
+  console.log('condition', condition);
   burger.updateOne({
     devoured: true
   }
@@ -39,10 +39,10 @@ router.post('/api/burgers/:id', function(req, res) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
+      res.redirect('/')
       res.status(200).end();
     }
     // console.log(result);
-    res.redirect("/");
   });
 });
 
