@@ -1,9 +1,8 @@
-<section class="container bg-info p-5">
-	<h1 class="text-center bg-dark text-light p-5">Burgers <img src="../public/assets/img/download.jpg" width="200px"
-			id="cute_burger"></h1>
+<section class="container p-5 section">
+	<h1 class="text-center text-light p-5 head">Burger Space</h1>
 
 
-	<h2 class="m-t-5">Add A Burger Option</h2>
+	<h2 class="m-t-5 text-light">Add A Burger</h2>
 
 	<div class="row p-5">
 		<div class="col-sm-8">
@@ -18,31 +17,31 @@
 
 	<div class="row">
 		<div class="col-sm-6">
-			<h2>Burgers to devour</h2>
+			<h2 class="text-light">Burgers to devour</h2><br><br>
 
 			<ul>
 				{{#each burgers}}
 				{{#unless this.devoured}}
 				<div>
-					<h4 class="text-dark">{{this.id}} {{this.burger_name}}</h4>
+					<h4 class="text-light">{{this.burger_name}}</h4>
 
 					<form action="/api/burgers/{{this.id}}?_method=PUT" method="POST">
 						<button type="submit" class='btn btn-dark'> Click to Devour!</button>
-					</form>
+					</form><br>
 				</div>
 				{{/unless}}
 				{{/each}}
 			</ul>
 		</div>
 		<div class="col-sm-6">
-			<h2>Devoured Burgers</h2>
+			<h2 class="text-light">Devoured Burgers</h2><br><br>
 
 			<ul>
 				{{#each burgers}}
 				{{#if this.devoured}}
 				<div class='burgerEaten'>
 					<div>
-						<h4 class="text-dark">{{this.burger_name}}</h4>
+						<li><h4 class="text-light">    {{this.burger_name}}</h4><br></li>
 					</div>
 				</div>
 				{{/if}}

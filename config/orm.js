@@ -87,7 +87,7 @@ var orm = {
 			// Return results in callback
 			cb(result);
 		});
-	}
+	},
 };
 
 // Export the orm object for use in other modules
