@@ -11,7 +11,11 @@ var connection = mysql.createConnection({
   port: 3306,
   user: "root",
   password: "password",
-  database: "burger_db"
+  database: "burger_db",
+  production: {
+    use_env_variable: "JAWSDB_GRAY_URL",
+    dialect: "mysql"
+  }
 });
 
 // Connect to the database
